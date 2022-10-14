@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.opacity-enter-active,
+.opacity-leave-active {
+    transition: opacity .5s ease-in;
+}
+
+.opacity-enter,
+.opacity-leave-to
+
+/* .fade-leave-active до версии 2.1.8 */
+    {
+    opacity: 0;
+}
