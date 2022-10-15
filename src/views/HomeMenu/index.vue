@@ -1,15 +1,15 @@
 <template>
-  <div class="home-menu">
+  <div class="home-menu" v-if="isHome">
     <div class="home-menu-body">
-      <close-button :styles="{ position: 'absolute', top: '1rem', right: '1rem' }" @click="closeHomeMenu"/>
-      <menu-nav/>
-      <component :is="currentPage" style="flex: 1 1 100%"/>
+      <close-button :styles="{ position: 'absolute', top: '1rem', right: '1rem' }" @click.native="closeHomeMenu" />
+      <menu-nav />
+      <component :is="currentPage" style="flex: 1 1 100%" />
     </div>
   </div>
 </template>
 
 <script>
-import {mapState} from 'vuex'
+import { mapState } from 'vuex'
 import MenuNav from './components/MenuNav'
 import FurniturePage from './FurniturePage'
 import GaragePage from './GaragePage'
@@ -18,6 +18,12 @@ import CloseButton from '../OptionsMenu/common/CloseButton.vue'
 
 export default {
   name: 'HomeMenu',
+
+  data() {
+    return {
+      isHome: true
+    }
+  },
 
   components: {
     MenuNav,
@@ -33,6 +39,7 @@ export default {
 
   methods: {
     closeHomeMenu: function () {
+      this.isHome = false
       window.mp.trigger('homeMenu:closeHomeMenu')
     }
   }
