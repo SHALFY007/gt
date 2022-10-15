@@ -1,27 +1,51 @@
 <template>
-  <div class="home-menu" v-if="isHome">
-    <div class="home-menu-body">
-      <close-button :styles="{ position: 'absolute', top: '1rem', right: '1rem' }" @click.native="closeHomeMenu" />
-      <menu-nav />
-      <component :is="currentPage" style="flex: 1 1 100%" />
+
+  <div class="home-page">
+    <OptionsMenu />
+    <div class="home-menu" v-if="isHome">
+
+      <div class="home-menu-body" style="z-index: 999; margin-top: 10px;">
+        <close-button :styles="{ position: 'absolute', top: '1rem', right: '1rem' }" @click.native="closeHomeMenu" />
+        <menu-nav />
+        <component :is="currentPage" style="flex: 1 1 100%" />
+      </div>
+
     </div>
   </div>
+
 </template>
 
 <script>
+
 import { mapState } from 'vuex'
 import MenuNav from './components/MenuNav'
 import FurniturePage from './FurniturePage'
 import GaragePage from './GaragePage'
 import ResidentsPage from './ResidentsPage'
 import CloseButton from '../OptionsMenu/common/CloseButton.vue'
+import ExclusiveItem from './components/ExclusiveItem.vue'
+import HeaderNavigationItem from '../OptionsMenu/common/HeaderNavigationItem.vue'
+import NavigationBar from '../Customization/NavigationBar.vue'
+import OptionsMenu from './Menu/index.vue'
 
 export default {
   name: 'HomeMenu',
 
   data() {
     return {
-      isHome: true
+      exclusive: [],
+      isHome: true,
+      navItems: [
+        { title: 'mm_main_nav_t_1', description: 'mm_main_nav_d_1', location: 'StatisticsTab' },
+        { title: 'mm_main_nav_t_2', description: 'mm_main_nav_d_2', location: 'OrganizationTab' },
+        { title: 'mm_main_nav_t_3', description: 'mm_main_nav_d_3', location: 'InformationTab' },
+        { title: 'mm_main_nav_t_5', description: 'mm_main_nav_d_5', location: 'ProgramTab' },
+        { title: 'mm_main_nav_d_6', description: 'mm_main_nav_t_6', location: 'ReferalTab' },
+        { title: 'mm_main_nav_t_4', description: 'mm_main_nav_d_4', location: 'SettingsTab' },
+        { title: 'optmenu:tabs:tit', description: 'optmenu:tabs:desc', location: 'ReportsTab' },
+
+      ]
+
     }
   },
 
@@ -30,23 +54,126 @@ export default {
     FurniturePage,
     GaragePage,
     ResidentsPage,
-    CloseButton
+    CloseButton,
+    ExclusiveItem,
+    HeaderNavigationItem,
+    NavigationBar,
+    OptionsMenu
   },
 
   computed: {
-    ...mapState('homeMenu', ['currentPage'])
+    ...mapState('homeMenu', ['currentPage']),
+    ...mapState('optionsMenu', ['currentTab', 'statistics', 'balance', 'fraction', 'captAttack', 'dialog', 'bp']),
   },
 
   methods: {
+    showNavElement() {
+      return true;
+    },
     closeHomeMenu: function () {
       this.isHome = false
       window.mp.trigger('homeMenu:closeHomeMenu')
     }
+  },
+  mounted() {
+    this.exclusive = this.$store.getters.getExclusive
+    console.log(this.$store.getters.getExclusive[0].title)
   }
 }
 </script>
 
 <style lang="scss">
+.navigation {
+  font-weight: 600;
+  display: flex;
+  flex: 1 1 100%;
+  justify-content: flex-end;
+
+  .shop {
+    color: #FFCD4D;
+
+    &::after {
+      background: #FFCD4D;
+      border: 1px solid rgba(255, 205, 77, 0.09);
+      box-shadow: 0px -5px 75px 20px rgba(255, 205, 77, 0.55);
+    }
+
+    &.active {
+      color: #FFCD4D;
+    }
+  }
+
+  .balance {
+    white-space: nowrap;
+    display: flex;
+    background: rgba(255, 255, 255, 0.05);
+    font-weight: 600;
+    border-radius: 2.4rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 1rem 0.7rem 0.7rem;
+
+    &__icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      overflow: hidden;
+      transition: 0.5s ease;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &__info {
+      margin: 0 0.77rem;
+
+      .desc {
+        font-size: 0.77rem;
+        line-height: 0.94rem;
+        color: rgba(255, 255, 255, 0.25);
+      }
+
+      .amount {
+        font-size: 1.1rem;
+        line-height: 1.33rem;
+        color: #5CFF80;
+      }
+    }
+
+    &__deposit-icon {
+      position: relative;
+      min-width: 1.5rem;
+      min-height: 1.5rem;
+      max-width: 1.5rem;
+      max-height: 1.5rem;
+      font-weight: 900;
+      color: rgba(0, 0, 0, 0.55);
+      background: #FF9A24;
+      font-size: 1.2rem;
+      line-height: 0;
+      box-shadow: 0px 0px 10px 2px rgba(255, 201, 77, 0.55);
+      border-radius: 50%;
+      overflow: hidden;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease;
+
+      &:before {
+        content: '+';
+        line-height: 0;
+        margin: auto;
+      }
+
+      &:hover {
+        transform: scale(1.04);
+        box-shadow: 0px 0px 15px 4px rgba(255, 201, 77, 0.55);
+      }
+    }
+  }
+}
+
 .home-menu {
   position: absolute;
   display: flex;
@@ -236,6 +363,7 @@ export default {
       box-shadow: inset 0px 0px 15px rgba(127, 127, 127, 0.8);
       color: #d9d9d9;
     }
+
   }
 }
 </style>

@@ -122,13 +122,21 @@ export default new Vuex.Store({
             isRequest: true,
             name: '',
             money: 500
+        },
+        exclusive: [
+            { id: 0, title: 'qwert', subtitle: 'asd' }
+        ]
+    },
+    getters: {
+        getExclusive(state) {
+            return state.exclusive
         }
     },
     mutations: {
         setPage(state, page) {
             state.currentPage = page;
         },
-        inventoryEnabled(state, val){
+        inventoryEnabled(state, val) {
             state.inventoryEnable = val;
         },
         setFamilyData(state, data) {
@@ -138,13 +146,13 @@ export default new Vuex.Store({
         setPhoneActive(state, isActive) {
             state.isSmartphone = isActive;
         },
-        setBackground(state, val){
+        setBackground(state, val) {
             state.background = val;
         },
-        setLoadScreen(state, toggle){
+        setLoadScreen(state, toggle) {
             state.loadScreen = toggle == true;
         },
-        showBinoculars(state, toggle){
+        showBinoculars(state, toggle) {
             state.isBinoculars = toggle;
         }
     },
