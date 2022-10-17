@@ -43,7 +43,7 @@ export default {
         { title: 'mm_main_nav_d_6', description: 'mm_main_nav_t_6', location: 'ReferalTab' },
         { title: 'mm_main_nav_t_4', description: 'mm_main_nav_d_4', location: 'SettingsTab' },
         { title: 'optmenu:tabs:tit', description: 'optmenu:tabs:desc', location: 'ReportsTab' },
-
+        { title: 'магазин', description: 'shop', location: 'ShopTab' },
       ]
 
     }
@@ -175,6 +175,7 @@ export default {
 }
 
 .home-menu {
+  margin-top: 2.5rem;
   position: absolute;
   display: flex;
   top: -0.1rem;

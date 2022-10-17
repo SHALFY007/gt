@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 import inventory from './inventory';
+import newDonateShop from './newDonateShop'
 // import familyMenu from './familyMenu'
 // import animationsMenu from './animationsMenu'
 // import stockMenu from './stockMenu'
@@ -171,6 +172,7 @@ export default new Vuex.Store({
         // passport,
         // weddingMenu,
         localization,
+        newDonateShop,
         // cashMachine,
         // licenses,
         // gasStation,

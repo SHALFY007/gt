@@ -7,13 +7,8 @@
           <div class="desc">Краткое описание этого интерфейса, зачем и почему.</div>
         </div>
         <div class="navigation">
-          <header-navigation-item
-              v-for="(item, index) in navItems"
-              v-show="showNavElement(item.location)"
-              :key="index"
-              :item="item"
-              :rightTab="rightTab"
-          />
+          <header-navigation-item v-for="(item, index) in navItems" v-show="showNavElement(item.location)" :key="index"
+            :item="item" :rightTab="rightTab" />
           <div class="balance">
             <div class="balance__icon">
               <img src="/img/optionsMenu/statisticsTab/icons/balance.svg">
@@ -31,18 +26,19 @@
         </div>
       </div>
       <div class="options-menu__main">
-        <component :is="rightTab"/>
+        <component :is="rightTab" />
       </div>
-      <Dialog v-if="dialog" :dialog="dialog"/>
-      <CaptAttack v-if="captAttack"/>
+      <Dialog v-if="dialog" :dialog="dialog" />
+      <CaptAttack v-if="captAttack" />
     </div>
   </div>
 </template>
 
 <script>
-import {mapState, mapGetters} from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 import HomeMenu from "../HomeMenu";
 import StatisticsTab from './Tabs/StatisticsTab'
+import ShopTab from './Tabs/ShopTab'
 import SettingsTab from './Tabs/SettingsTab'
 import OrganizationTab from './Tabs/OrganizationTab'
 import ReportsTab from './Tabs/ReportsTab'
@@ -69,20 +65,21 @@ export default {
     CloseButton,
     Dialog,
     CaptAttack,
-    ReferalTab
+    ReferalTab,
+    ShopTab
   },
 
   data: function () {
     return {
       navItems: [
-        {title: 'mm_main_nav_t_1', description: 'mm_main_nav_d_1', location: 'StatisticsTab'},
-        {title: 'mm_main_nav_t_2', description: 'mm_main_nav_d_2', location: 'OrganizationTab'},
-        {title: 'mm_main_nav_t_3', description: 'mm_main_nav_d_3', location: 'InformationTab'},
-        {title: 'mm_main_nav_t_5', description: 'mm_main_nav_d_5', location: 'ProgramTab'},
-        {title: 'mm_main_nav_d_6', description: 'mm_main_nav_t_6', location: 'ReferalTab'},
-        {title: 'mm_main_nav_t_4', description: 'mm_main_nav_d_4', location: 'SettingsTab'},
-        {title: 'optmenu:tabs:tit', description: 'optmenu:tabs:desc', location: 'ReportsTab'},
-        {title: 'магазин', description: 'shop', location: 'HomeMenu'},
+        { title: 'mm_main_nav_t_1', description: 'mm_main_nav_d_1', location: 'StatisticsTab' },
+        { title: 'mm_main_nav_t_2', description: 'mm_main_nav_d_2', location: 'OrganizationTab' },
+        { title: 'mm_main_nav_t_3', description: 'mm_main_nav_d_3', location: 'InformationTab' },
+        { title: 'mm_main_nav_t_5', description: 'mm_main_nav_d_5', location: 'ProgramTab' },
+        { title: 'mm_main_nav_d_6', description: 'mm_main_nav_t_6', location: 'ReferalTab' },
+        { title: 'mm_main_nav_t_4', description: 'mm_main_nav_d_4', location: 'SettingsTab' },
+        { title: 'optmenu:tabs:tit', description: 'optmenu:tabs:desc', location: 'ReportsTab' },
+        { title: 'магазин', description: 'shop', location: 'ShopTab' },
       ]
     }
   },
@@ -333,6 +330,7 @@ export default {
       margin-bottom: 0.5rem;
     }
   }
+
   .item__btn {
     text-align: center;
     cursor: pointer;
