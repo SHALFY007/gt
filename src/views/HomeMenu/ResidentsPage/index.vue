@@ -19,11 +19,7 @@
     </div>
     <div class="main">
       <span v-if="occupiers.length === 0">{{ loc('HomeMenu_5') }}</span>
-      <div
-          class="billet-item"
-          v-for="(item) in occupiers"
-          :key="item.id"
-      >
+      <div class="billet-item" v-for="(item) in occupiers" :key="item.id">
         <div class="item-text">
           <div class="title">{{ item.name }}</div>
           <div class="subtitle">живет n дней</div>
@@ -31,11 +27,7 @@
         <div class="item__btn" @click="deleteOccupier(item.uuid)">убрать</div>
       </div>
     </div>
-    <Modal
-      v-if="dataModal.show"
-      :type="dataModal.type"
-      :closeModal="closeModal"
-    />
+    <Modal v-if="dataModal.show" :type="dataModal.type" :closeModal="closeModal" />
   </div>
 </template>
 
@@ -50,7 +42,7 @@ export default {
     Modal
   },
 
-  data: function() {
+  data: function () {
     return {
       dataModal: {
         show: false,
@@ -66,14 +58,14 @@ export default {
 
   methods: {
     ...mapMutations('homeMenu', ['setSafe', 'setGarage', 'deleteOccupier', 'deleteAllOccupiers']),
-    buyGarage: function(key) {
+    buyGarage: function (key) {
       window.mp.trigger('homeMenu:buyGarage', this.houseId, key)
     },
-    setModal: function(type) {
+    setModal: function (type) {
       this.dataModal.type = type
       this.dataModal.show = true
     },
-    closeModal: function() {
+    closeModal: function () {
       this.dataModal.show = false
       this.dataModal.type = null
     },
@@ -87,10 +79,12 @@ export default {
     .title {
       width: 11rem;
     }
+
     .subtitle {
       margin-left: 1rem;
     }
   }
+
   .btn-edit {
     font-size: 0.7rem;
     line-height: 1.5;
@@ -99,6 +93,7 @@ export default {
     opacity: 0.55;
     margin-left: 0.5rem;
     transition: 0.3s ease;
+
     &:hover {
       opacity: 1;
     }

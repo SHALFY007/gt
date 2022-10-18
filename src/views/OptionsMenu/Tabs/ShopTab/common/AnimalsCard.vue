@@ -55,6 +55,12 @@ export default {
     position: relative;
     overflow: hidden;
     margin-right: 27px;
+    transition: transform 0.4s ease;
+
+    &:hover {
+        transform: scale(1.04);
+
+    }
 }
 
 .background {

@@ -54,6 +54,12 @@ export default {
     border-radius: 27px;
     position: relative;
     overflow: hidden;
+    transition: transform 0.4s ease;
+
+    &:hover {
+        transform: scale(1.04);
+
+    }
 }
 
 .background {

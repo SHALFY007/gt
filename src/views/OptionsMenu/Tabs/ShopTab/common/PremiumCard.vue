@@ -184,6 +184,12 @@ export default {
     padding-left: 35px;
     box-sizing: border-box;
     overflow: hidden;
+    transition: transform 0.4s ease;
+
+    &:hover {
+        transform: scale(1.04);
+
+    }
 }
 
 .top-card {
