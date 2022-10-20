@@ -52,6 +52,12 @@ export default {
     opacity: 0;
   }
 
+  &#shop::after {
+    background: #FFCD4D;
+
+    box-shadow: 0px -5px 75px 20px #FFCD4D;
+  }
+
   &:not(:last-child) {
     margin: 0 2rem 0 0;
   }
@@ -64,7 +70,7 @@ export default {
       opacity: 1;
     }
 
-    &#shop.active {
+    &#shop {
       color: #FFCD4D;
 
     }
@@ -74,5 +80,9 @@ export default {
     font-size: 1rem;
     line-height: 1;
   }
+}
+
+#shop {
+  color: #FFCD4D;
 }
 </style>

@@ -1,19 +1,13 @@
 <template>
   <div class="modal">
-    <close-button :styles="{ position: 'absolute', top: '0', right: '0' }" @close="$emit('close')"/>
+    <close-button :styles="{ position: 'absolute', top: '0', right: '0' }" @close="$emit('close')" />
     <div class="modal__side">
       <div class="heading">
         <div class="category">{{ typeName }}</div>
         <div class="title">
           <div class="title__name">
             <div class="text" v-if="!isEdit">{{ property.business.name }}</div>
-            <textarea
-                v-else
-                v-model="property.business.name"
-                class="area"
-                maxlength="20"
-                v-focus
-            ></textarea>
+            <textarea v-else v-model="property.business.name" class="area" maxlength="20" v-focus></textarea>
           </div>
           <button class="change-btn" @click="changeName"><img
               :src="`img/optionsMenu/statisticsTab/businessModal/${isEdit ? 'check' : 'pencil'}.svg`"></button>
@@ -36,7 +30,8 @@
           <div class="subtitle">краткое описание для примера</div>
         </div>
         <div class="item__btn" @click="sell">{{ loc('mmain:stats:biz:cell') }}</div>
-        <div class="item__btn" style="margin-top: 0.5rem;"  @click="sellToPlayer">{{ loc('mmain:stats:biz:pcell') }}</div>
+        <div class="item__btn" style="margin-top: 0.5rem;" @click="sellToPlayer">{{ loc('mmain:stats:biz:pcell') }}
+        </div>
       </div>
     </div>
     <div class="modal__main">
@@ -45,19 +40,15 @@
         <div class="title">{{ loc('mmain:stats:biz:prod') }}</div>
       </div>
       <div class="products">
-        <products-item
-            v-for="(item, index) in property.business.products"
-            :key="index"
-            :item="item"
-            @onChange="changePrice"
-        />
+        <products-item v-for="(item, index) in property.business.products" :key="index" :item="item"
+          @onChange="changePrice" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import {mapState, mapGetters, mapMutations} from 'vuex'
+import { mapState, mapGetters, mapMutations } from 'vuex'
 import CloseButton from '../../../common/CloseButton.vue'
 import ProductsItem from './common/ProductsItem'
 
@@ -197,6 +188,7 @@ export default {
 
     .heading {
       margin-bottom: 1rem;
+
       .category {
         font-size: 0.9rem;
       }
@@ -274,9 +266,11 @@ export default {
 
   &__main {
     flex: 1 1 100%;
+
     .heading {
       margin: 0 0 1rem 0.7rem;
     }
+
     .products {
       height: 39.3rem;
       overflow-y: scroll;

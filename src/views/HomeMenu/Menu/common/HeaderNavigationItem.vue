@@ -1,5 +1,7 @@
 <template>
-  <div :class="[{ active: item.location === rightTab }, { shop: item.location === 'Shop' }, 'item']" @click="setCurrentTab(item.location)">
+  <div :id="item.description"
+    :class="[{ active: item.location === rightTab }, { shop: item.location === 'Shop' }, 'item']"
+    @click="setCurrentTab(item.location)">
     <div class="item__title">{{ loc(item.title) }}</div>
   </div>
 </template>
@@ -14,7 +16,7 @@ export default {
     item: Object,
     rightTab: String
   },
-  computed:{
+  computed: {
     ...mapGetters('localization', ['loc'])
   },
 
@@ -26,7 +28,7 @@ export default {
 
 <style lang="scss" scoped>
 .item {
-  color: rgba(255,255,255,0.25);
+  color: rgba(255, 255, 255, 0.25);
   letter-spacing: 0.03em;
   align-self: center;
   padding-top: 3.4rem;
@@ -34,6 +36,7 @@ export default {
   overflow: hidden;
   position: relative;
   cursor: pointer;
+
   &::after {
     transition: all 0.2s;
     content: "";
@@ -48,19 +51,40 @@ export default {
     box-shadow: 0px -5px 75px 20px rgba(219, 18, 27, 0.55);
     opacity: 0;
   }
+
+  &#shop::after {
+    background: #FFCD4D;
+
+    box-shadow: 0px -5px 75px 20px #FFCD4D;
+  }
+
   &:not(:last-child) {
     margin: 0 2rem 0 0;
   }
+
   &.active {
     color: #fff;
+
     &::after {
       transform: translate(-50%, -50%) scale(1);
       opacity: 1;
     }
+
+    &#shop.active {
+      color: #FFCD4D;
+
+    }
   }
+
+
+
   &__title {
     font-size: 1rem;
     line-height: 1;
   }
+}
+
+#shop {
+  color: #FFCD4D;
 }
 </style>
