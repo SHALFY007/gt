@@ -2,7 +2,7 @@
     <div class="modal">
         <div class="top-part-exclusive">
             <div class="exclusive-list" v-for="item in pictures" :key="item.id">
-                <ExclusiveCardModal :pictures="item" :ref="item.title" @click.native="addBorder" />
+                <ExclusiveCardModal :pictures="item" :ref="item.title" @modalClickCard="addBorder" class="exclusive-modal-item"/>
             </div>
         </div>
 
@@ -20,6 +20,7 @@ export default {
     name: "ExclusiveModal",
     data() {
         return {
+            activeEl: null,
             pictures: [
                 { id: 1, shirt: '/img/shirt-modal.png', sneacker: '/img/sneackers-modal.png', pants: '/img/pants-modal.png', title: 'first' },
                 { id: 2, shirt: '/img/shirt-modal-2.png', sneacker: '/img/sneackers-modal-2.png', pants: '/img/pants-modal-2.png', title: 'second' },
@@ -31,10 +32,19 @@ export default {
     mounted() {
         console.log('Com')
         console.log(this.$refs.second[0].$el)
-        this.$refs.second[0].$el.classList.add('active')
+        /*this.$refs.second[0].$el.classList.add('active')*/
     },
     methods: {
-        addBorder() {
+        addBorder(id) {
+            if (this.activeEl == null) {
+                console.log('asd')
+                document.getElementById(id).classList.add('active')
+                this.activeEl = id
+            } else {
+                document.getElementById(this.activeEl).classList.remove('active')
+                this.activeEl = id
+                document.getElementById(this.activeEl).classList.add('active')
+            }
         }
     }
 
@@ -67,7 +77,15 @@ export default {
 .exclusive-list {
     display: flex;
 }
+.exclusive-modal-item {
+  transition: transform 0.4s ease;
 
+  &:hover {
+    transform: scale(1.04);
+    border: 1px solid #5CFF80;
+
+  }
+}
 .range {
     width: 100%;
     height: 2px;

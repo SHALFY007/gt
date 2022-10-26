@@ -1,5 +1,5 @@
 <template>
-    <div class="categories-card" ref="categoryObject" @click="modalClick">
+    <div class="categories-card" :id="category.id+'-category'" ref="categoryObject" @click="modalClick">
         <div class="background">
             <div class="background-1"></div>
             <svg class="background-2" xmlns="http://www.w3.org/2000/svg" width="27" height="40" viewBox="0 0 27 40"
@@ -23,7 +23,7 @@ export default {
     },
     methods: {
         modalClick() {
-            this.$refs.categoryObject.classList.toggle('active')
+            this.$emit('modalClickCategory', `${this.category.id}-category`)
         }
     }
 }
@@ -40,12 +40,20 @@ export default {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    /*transition: transform 0.4s ease;
+
+    &:hover {
+        transform: scale(1.04);
+        border: 1px solid #5CFF80 !important;
+
+
+    }*/
 
 }
 
 .active {
-    border: 1px solid #5CFF80 !important;
-    ;
+    /*border: 1px solid #5CFF80 !important;
+    ;*/
 }
 
 .background {

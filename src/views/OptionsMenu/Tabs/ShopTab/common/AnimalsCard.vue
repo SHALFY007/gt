@@ -55,12 +55,12 @@ export default {
     position: relative;
     overflow: hidden;
     margin-right: 27px;
-    transition: transform 0.4s ease;
+    /*transition: transform 0.4s ease;
 
     &:hover {
         transform: scale(1.04);
 
-    }
+    }*/
 }
 
 .background {
@@ -89,7 +89,7 @@ export default {
     }
 
     &-4 {
-        background: url(../../../../../../public/img/Shop/dog.png);
+        background: url("/img/Shop/dog.png");
         filter: blur(0px);
         opacity: 1;
         width: 249px;
@@ -100,7 +100,7 @@ export default {
     }
 
     &-5c {
-        background: url(../../../../../../public/img/Shop/cat.png);
+        background: url("/img/Shop/cat.png");
         background-repeat: no-repeat;
         width: 249px;
         height: 229px;

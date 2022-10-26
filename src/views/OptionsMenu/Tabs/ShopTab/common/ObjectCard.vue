@@ -54,12 +54,12 @@ export default {
     border-radius: 27px;
     position: relative;
     overflow: hidden;
-    transition: transform 0.4s ease;
+    /*transition: transform 0.4s ease;
 
     &:hover {
         transform: scale(1.04);
 
-    }
+    }*/
 }
 
 .background {
@@ -90,7 +90,7 @@ export default {
     }
 
     &-4 {
-        background: url(../../../../../../public/img/Shop/bag.png);
+        background: url("/img/Shop/bag.png");
         filter: blur(0px);
         opacity: 1;
         background-repeat: no-repeat;
@@ -102,7 +102,7 @@ export default {
     }
 
     &-5g {
-        background: url(../../../../../../public/img/Shop/gun.png);
+        background: url("/img/Shop/gun.png");
         background-repeat: no-repeat;
         width: 313px;
         height: 153px;

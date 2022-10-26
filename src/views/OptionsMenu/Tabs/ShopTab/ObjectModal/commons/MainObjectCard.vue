@@ -131,12 +131,12 @@ export default {
     padding-left: 35px;
     box-sizing: border-box;
     overflow: hidden;
-    transition: transform 0.4s ease;
+    /*transition: transform 0.4s ease;
 
     &:hover {
         transform: scale(1.04);
 
-    }
+    }*/
 }
 
 .top-card {
@@ -194,7 +194,7 @@ export default {
 
 .central-image {
 
-    background: url(../../../../../../../public/img/Shop/gun-2.png);
+    background: url("/img/Shop/gun-2.png");
     width: 369.75px;
     height: 180.74px;
     position: absolute;
@@ -209,7 +209,7 @@ export default {
         height: 138.21px;
         top: 302px;
         left: 17px;
-        background: url(../../../../../../../public/img/Shop/bag-2.png);
+        background: url("/img/Shop/bag-2.png");
     }
 }
 

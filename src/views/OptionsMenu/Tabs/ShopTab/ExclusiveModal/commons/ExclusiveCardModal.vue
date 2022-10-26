@@ -1,5 +1,5 @@
 <template>
-    <div class="modal-card" ref="modalCard" @click="modalClick">
+    <div class="modal-card" :id="pictures.id+'-card'" ref="modalCard" @click="modalClick">
         <div class="background">
             <svg class="background-1" xmlns="http://www.w3.org/2000/svg" width="549" height="386" viewBox="0 0 549 386"
                 fill="none">
@@ -95,10 +95,14 @@ export default {
     },
     methods: {
         modalClick() {
-            console.log(this.$refs.modalCard)
-            this.$refs.modalCard.classList.toggle('active')
+            this.$emit('modalClickCard', `${this.pictures.id}-card`)
+            /*console.log(this.$refs.modalCard)
+            this.$refs.modalCard.classList.toggle('active')*/
 
         }
+    },
+    mounted() {
+        console.log(this.pictures)
     }
 }
 </script>
@@ -114,11 +118,18 @@ export default {
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
+    /*transition: transform 0.4s ease;
+
+    &:hover {
+        transform: scale(1.04);
+        border: 1px solid #5CFF80;
+
+    }*/
 }
 
 .active {
-    border: 1px solid #5CFF80;
-    ;
+    /*border: 1px solid #5CFF80;
+    ;*/
 }
 
 .background {
@@ -155,7 +166,7 @@ export default {
         left: -32px;
         top: 401px;
         position: absolute;
-        background: url(../../../../../../../public/img/Shop/audi2.png);
+        background: url("/img/Shop/audi2.png");
         background-repeat: no-repeat;
         z-index: 3;
     }
@@ -167,9 +178,9 @@ export default {
         height: 363px;
         left: 168.16px;
         top: 38.16px;
-        background: url(../../../../../../../public/img/Shop/shirt-modal.png);
-        background: url(../../../../../../../public/img/Shop/shirt-modal-2.png);
-        background: url(../../../../../../../public/img/Shop/shirt-modal-3.png);
+        background: url("/img/Shop/shirt-modal.png");
+        background: url("/img/Shop/shirt-modal-2.png");
+        background: url("/img/Shop/shirt-modal-3.png");
         background-repeat: no-repeat;
     }
 
@@ -179,9 +190,9 @@ export default {
         height: 370px;
         left: 121px;
         top: 263.22px;
-        background: url(../../../../../../../public/img/Shop/pants-modal.png);
-        background: url(../../../../../../../public/img/Shop/pants-modal-2.png);
-        background: url(../../../../../../../public/img/Shop/pants-modal-3.png);
+        background: url("/img/Shop/pants-modal.png");
+        background: url("/img/Shop/pants-modal-2.png");
+        background: url("/img/Shop/pants-modal-3.png");
         background-repeat: no-repeat;
     }
 
@@ -192,9 +203,9 @@ export default {
         left: 190px;
         z-index: 4;
         top: 539px;
-        background: url(../../../../../../../public/img/Shop/sneackers-modal.png);
-        background: url(../../../../../../../public/img/Shop/sneackers-modal-2.png);
-        background: url(../../../../../../../public/img/Shop/sneackers-modal-3.png);
+        background: url("/img/Shop/sneackers-modal.png");
+        background: url("/img/Shop/sneackers-modal-2.png");
+        background: url("/img/Shop/sneackers-modal-3.png");
         background-repeat: no-repeat;
     }
 }

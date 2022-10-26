@@ -141,12 +141,12 @@ export default {
     padding-top: 19px;
     padding-left: 35px;
     overflow: hidden;
-    transition: transform 0.4s ease;
+    /*transition: transform 0.4s ease;
 
     &:hover {
         transform: scale(1.04);
 
-    }
+    }*/
 }
 
 .background {
@@ -179,7 +179,7 @@ export default {
         top: 396px;
         background: #FFFFFF;
         opacity: 0.25;
-        filter: blur(89px);
+        /*filter: blur(89px);*/
     }
 
     &-5 {
@@ -189,7 +189,7 @@ export default {
         position: absolute;
         top: 177px;
         left: 215px;
-        background: url(../../../../../../public/img/Shop/audi1.png);
+        background: url("/img/Shop/audi1.png");
         background-repeat: no-repeat;
 
     }
@@ -201,7 +201,7 @@ export default {
         position: absolute;
         top: 304px;
         left: 121px;
-        background: url(../../../../../../public/img/Shop/feet_0321.png);
+        background: url("/img/Shop/feet_0321.png");
         background-repeat: no-repeat;
     }
 
@@ -212,7 +212,7 @@ export default {
         position: absolute;
         top: 80px;
         left: 195px;
-        background: url(../../../../../../public/img/Shop/shirt-1.png);
+        background: url("/img/Shop/shirt-1.png");
         background-repeat: no-repeat;
         filter: blur(1px);
         transform: rotate(-15deg);
@@ -225,7 +225,7 @@ export default {
         position: absolute;
         top: 0px;
         left: 357px;
-        background: url(../../../../../../public/img/Shop/shirt-2.png);
+        background: url("/img/Shop/shirt-2.png");
         background-repeat: no-repeat;
     }
 

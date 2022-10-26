@@ -74,12 +74,12 @@ export default {
     border-radius: 27px;
     position: relative;
     overflow: hidden;
-    transition: transform 0.4s ease;
+    /*transition: transform 0.4s ease;
 
     &:hover {
         transform: scale(1.04);
 
-    }
+    }*/
 }
 
 .background {
@@ -112,7 +112,7 @@ export default {
     }
 
     &-5r {
-        background: url(../../../../../../public/img/Shop/cur-left.png);
+        background: url("/img/Shop/cur-left.png");
         position: absolute;
         width: 524.04px;
         height: 570.91px;
@@ -123,7 +123,7 @@ export default {
     }
 
     &-6r {
-        background: url(../../../../../../public/img/Shop/cur-right.png);
+        background: url("/img/Shop/cur-right.png");
         position: absolute;
         width: 524.04px;
         height: 570.91px;
@@ -134,7 +134,7 @@ export default {
     }
 
     &-7r {
-        background: url(../../../../../../public/img/Shop/gold.png);
+        background: url("/img/Shop/gold.png");
         position: absolute;
         width: 322px;
         height: 218px;

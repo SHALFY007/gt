@@ -1,16 +1,16 @@
 <template>
     <div class="modal">
 
-        <MainObjectCard />
+        <MainObjectCard class="object-modal-no-border"/>
         <div class="categories-object">
             <div class="category-object" v-for="item in categoryItems" :key="item.id" @click.native="addBorder">
-                <CategoriesObjectCard :category="item" />
+                <CategoriesObjectCard :category="item" @modalClickCategory='addBorderCategory' class="object-modal-item"/>
             </div>
 
         </div>
         <div class="object-items">
             <div class="object-item" v-for="item in objectItems" :key="item.id">
-                <ItemObjectCard :objectCard="item" />
+                <ItemObjectCard :objectCard="item" @modalClick='addBorderItem' class="object-modal-item"/>
             </div>
         </div>
 
@@ -31,6 +31,8 @@ export default {
     },
     data() {
         return {
+            activeELItem: null,
+            activeElCategory: null,
             categoryItems: [
                 { id: 0, text: 'одежда' },
                 { id: 1, text: 'категория' },
@@ -53,8 +55,27 @@ export default {
         }
     },
     methods: {
-        addBorder() {
-
+        addBorderItem(id) {
+            if (this.activeELItem == null) {
+                console.log('asd')
+                document.getElementById(id).classList.add('active')
+                this.activeELItem = id
+            } else {
+                document.getElementById(this.activeELItem).classList.remove('active')
+                this.activeELItem = id
+                document.getElementById(this.activeELItem).classList.add('active')
+            }
+        },
+        addBorderCategory(id) {
+            if (this.activeElCategory == null) {
+                console.log('asd')
+                document.getElementById(id).classList.add('active')
+                this.activeElCategory = id
+            } else {
+                document.getElementById(this.activeElCategory).classList.remove('active')
+                this.activeElCategory = id
+                document.getElementById(this.activeElCategory).classList.add('active')
+            }
         }
     }
 }
@@ -74,8 +95,7 @@ export default {
 }
 
 .active {
-    border: 1px solid #5CFF80;
-    ;
+    border: 1px solid #5CFF80 !important;
 }
 
 .category-object {
@@ -88,12 +108,30 @@ export default {
     flex-direction: column;
     margin-right: 39px;
 }
+.object-modal-no-border {
+  transition: transform 0.4s ease;
 
+  &:hover {
+    transform: scale(1.04);
+
+
+  }
+}
 .object-items {
     display: flex;
     max-width: 1094px;
     max-height: 906px;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+.object-modal-item {
+  transition: transform 0.4s ease;
+
+  &:hover {
+    transform: scale(1.04);
+    border: 1px solid #5CFF80 !important;
+
+
+  }
 }
 </style>

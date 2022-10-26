@@ -136,10 +136,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@font-face {
-    font-family: Akrobat;
-    src: url('');
-}
 
 .background {
     position: absolute;
@@ -184,12 +180,12 @@ export default {
     padding-left: 35px;
     box-sizing: border-box;
     overflow: hidden;
-    transition: transform 0.4s ease;
+    /*transition: transform 0.4s ease;
 
     &:hover {
         transform: scale(1.04);
 
-    }
+    }*/
 }
 
 .top-card {
@@ -296,7 +292,7 @@ export default {
 
 .central-image {
 
-    background: url(../../../../../../public/img/Shop/shop-corona.png);
+    background: url("/img/Shop/shop-corona.png");
     width: 222px;
     height: 166px;
     position: absolute;

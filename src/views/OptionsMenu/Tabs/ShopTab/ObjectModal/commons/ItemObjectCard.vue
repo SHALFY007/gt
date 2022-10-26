@@ -1,5 +1,5 @@
 <template>
-    <div class="item-card-object" ref="modalObject" @click="modalClick">
+    <div class="item-card-object" :id="objectCard.id+'-item'" @click="$emit('modalClick', `${objectCard.id}-item`)">
         <div class="background">
             <svg class="background-1" xmlns="http://www.w3.org/2000/svg" width="340" height="386" viewBox="0 0 340 386"
                 fill="none">
@@ -105,8 +105,7 @@ export default {
     },
     methods: {
         modalClick() {
-            console.log(this.$refs.modalObject)
-            this.$refs.modalObject.classList.toggle('active')
+            this.$emit('modalClick', `${this.objectCard.id}-item`)
         }
 
     }
@@ -123,12 +122,20 @@ export default {
     padding-top: 19px;
     padding-left: 35px;
     overflow: hidden;
+    /*transition: transform 0.4s ease;
+
+    &:hover {
+        transform: scale(1.04);
+        border: 1px solid #5CFF80 !important;
+
+
+    }*/
 }
 
-.active {
+/*.active {
     border: 1px solid #5CFF80 !important;
     ;
-}
+}*/
 
 .background {
     position: absolute;
@@ -161,7 +168,7 @@ export default {
         position: absolute;
         width: 176px;
         height: 186px;
-        background: url(../../../../../../../public/img/Shop/shirt-object-modal.png);
+        background: url("/img/Shop/shirt-object-modal.png");
         top: 134px;
         left: 46px;
     }
