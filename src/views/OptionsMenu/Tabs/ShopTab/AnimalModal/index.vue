@@ -8,8 +8,14 @@
     </div>
     <div class="animals-cente-cards">
       <div class="animal-centre-card" v-for="item in animalsList" :key="item.id">
-        <AnimalCard :animalCard="item"/>
+        <AnimalCard :animalCard="item" class="animal-card-modal"/>
       </div>
+    </div>
+    <div class="animals-right-cards">
+      <div class="animal-right-card" v-for="item in animalsDescription" :key="item.id">
+        <AnimalDescription :animalsDescription="item"/>
+      </div>
+
     </div>
 
 
@@ -19,13 +25,16 @@
 <script>
 import MainAnimalCard from "@/views/OptionsMenu/Tabs/ShopTab/AnimalModal/commons/MainAnimalCard";
 import AnimalCard from "@/views/OptionsMenu/Tabs/ShopTab/AnimalModal/commons/AnimalCard";
+import AnimalDescription from "@/views/OptionsMenu/Tabs/ShopTab/AnimalModal/commons/AnimalDescription";
 export default {
   name: "AnimalModal",
-  components: {AnimalCard, MainAnimalCard},
+  components: {AnimalDescription, AnimalCard, MainAnimalCard},
   data() {
     return {
       animalsList: [{id:1, name:'кирюха', color: '#FC9B41', opacity: '0.25', image: '/img/Shop/dog-modal.png', width: '267px', left: '44px'},
-                    {id:2, name:'анжелика', color: '#A582A5', opacity: '0.55', image: '/img/Shop/cat-modal.png', width: '220px', left: '68px'}]
+                    {id:2, name:'анжелика', color: '#A582A5', opacity: '0.55', image: '/img/Shop/cat-modal.png', width: '220px', left: '68px'}],
+      animalsDescription: [{id:1, name:'кирилл', buyName: 'кирилла'},
+        {id:2, name:'анжелика', buyName: 'анжелику'}]
     }
   }
 
@@ -46,11 +55,13 @@ export default {
 }
 
 .object-modal-item {
-  transition: transform 0.4s ease;
+  //transition: transform 0.4s ease;
   margin-right: 74px;
 
   &:hover {
-    transform: scale(1.04);
+    background-color: #1E1E1E;
+
+    //transform: scale(1.04);
     //border: 1px solid #5CFF80 !important;
 
 
@@ -68,5 +79,16 @@ export default {
     width: 2px;
     height: 133.04px;
   }
+}
+.animals-cente-cards {
+  margin-right: 58px;
+}
+.animal-card-modal {
+  &:hover {
+    border: 1px solid #5CFF80 !important;
+  }
+}
+.animal-right-card {
+  margin-bottom: 25px;
 }
 </style>

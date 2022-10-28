@@ -179,7 +179,7 @@ export default {
         top: 396px;
         background: #FFFFFF;
         opacity: 0.25;
-        /*filter: blur(89px);*/
+        filter: blur(89px);
     }
 
     &-5 {

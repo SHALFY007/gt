@@ -78,10 +78,10 @@ export default {
     display: flex;
 }
 .exclusive-modal-item {
-  transition: transform 0.4s ease;
+  //transition: transform 0.4s ease;
 
   &:hover {
-    transform: scale(1.04);
+    //transform: scale(1.04);
     border: 1px solid #5CFF80;
 
   }

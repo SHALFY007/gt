@@ -88,9 +88,11 @@ export default {
 
 
 .card-hover {
-  transition: transform 0.4s ease;
+  //transition: background-color 0.1s;
   &:hover {
-    transform: scale(1.04);
+    //transform: scale(1.04);
+    background-color: #1E1E1E;
+
   }
 }
 </style>

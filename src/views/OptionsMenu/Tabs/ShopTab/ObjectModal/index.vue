@@ -109,11 +109,11 @@ export default {
     margin-right: 39px;
 }
 .object-modal-no-border {
-  transition: transform 0.4s ease;
+  //transition: transform 0.4s ease;
 
   &:hover {
-    transform: scale(1.04);
-
+    //transform: scale(1.04);
+    background-color: #1E1E1E;
 
   }
 }
@@ -125,10 +125,10 @@ export default {
     justify-content: space-between;
 }
 .object-modal-item {
-  transition: transform 0.4s ease;
+  //transition: transform 0.4s ease;
 
   &:hover {
-    transform: scale(1.04);
+    //transform: scale(1.04);
     border: 1px solid #5CFF80 !important;
 
 
