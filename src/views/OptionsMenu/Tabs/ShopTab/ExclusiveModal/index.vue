@@ -22,9 +22,9 @@ export default {
         return {
             activeEl: null,
             pictures: [
-                { id: 1, shirt: '/img/shirt-modal.png', sneacker: '/img/sneackers-modal.png', pants: '/img/pants-modal.png', title: 'first' },
-                { id: 2, shirt: '/img/shirt-modal-2.png', sneacker: '/img/sneackers-modal-2.png', pants: '/img/pants-modal-2.png', title: 'second' },
-                { id: 3, shirt: '/img/shirt-modal-3.png', sneacker: '/img/sneackers-modal-3.png', pants: '/img/pants-modal-3.png', title: 'third' },]
+                { id: 1, shirt: '/img/Shop/shirt-modal.png', sneacker: '/img/Shop/sneackers-modal.png', pants: '/img/Shop/pants-modal.png', title: 'first' },
+                { id: 2, shirt: '/img/Shop/shirt-modal-2.png', sneacker: '/img/Shop/sneackers-modal-2.png', pants: '/img/Shop/pants-modal-2.png', title: 'second' },
+                { id: 3, shirt: '/img/Shop/shirt-modal-3.png', sneacker: '/img/Shop/sneackers-modal-3.png', pants: '/img/Shop/pants-modal-3.png', title: 'third' },]
         }
 
     },
@@ -65,12 +65,12 @@ export default {
 }
 
 .active {
-    border: 1px solid #5CFF80 !important
+    border: 0.055rem solid #5CFF80 !important
 }
 
 .top-part-exclusive {
     display: flex;
-    margin-bottom: 25px;
+    margin-bottom: 1.388rem;
     justify-content: space-between;
 }
 
@@ -78,25 +78,25 @@ export default {
     display: flex;
 }
 .exclusive-modal-item {
-  //transition: transform 0.4s ease;
+  //transition: border 0.4s ease;
 
   &:hover {
     //transform: scale(1.04);
-    border: 1px solid #5CFF80;
+    border: 0.055rem solid #5CFF80;
 
   }
 }
 .range {
     width: 100%;
-    height: 2px;
+    height: 0.11rem;
     overflow: hidden;
     position: relative;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
 
     &-full {
         position: absolute;
-        width: 283px;
-        height: 2px;
+        width: 15.722rem;
+        height: 0.11rem;
 
 
         background: #5CFF80;

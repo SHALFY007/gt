@@ -1,7 +1,7 @@
 <template>
     <div class="exclusive-part">
         <div class="background">
-            <svg class="background-1" xmlns="http://www.w3.org/2000/svg" width="775" height="386" viewBox="0 0 775 386"
+            <svg class="background-1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 775 386"
                 fill="none">
                 <path d="M453.702 -260L-192.298 386H101.603L453.702 33.9009L805.801 386H1099.7L453.702 -260Z"
                     fill="url(#paint0_linear_1_62)" fill-opacity="0.02" />
@@ -13,7 +13,7 @@
                     </linearGradient>
                 </defs>
             </svg>
-            <svg class="background-2" xmlns="http://www.w3.org/2000/svg" width="775" height="359" viewBox="0 0 775 359"
+            <svg class="background-2" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 775 359"
                 fill="none">
                 <path d="M453.702 0L-192.298 640H101.603L453.702 291.171L805.801 640H1099.7L453.702 0Z"
                     fill="url(#paint0_linear_1_59)" fill-opacity="0.02" />
@@ -25,7 +25,7 @@
                     </linearGradient>
                 </defs>
             </svg>
-            <svg class="background-3" xmlns="http://www.w3.org/2000/svg" width="775" height="42" viewBox="0 0 775 42"
+            <svg class="background-3" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 775 42"
                 fill="none">
                 <path d="M453.702 0L-192.298 646H101.603L453.702 293.901L805.801 646H1099.7L453.702 0Z"
                     fill="url(#paint0_linear_1_58)" fill-opacity="0.02" />
@@ -38,10 +38,10 @@
                 </defs>
             </svg>
             <div class="background-4"></div>
-            <div class="background-5"></div>
-            <div class="background-6"></div>
-            <div class="background-7"></div>
-            <div class="background-8"></div>
+<!--            <div class="background-5"></div>-->
+<!--            <div class="background-6"></div>-->
+<!--            <div class="background-7"></div>-->
+<!--            <div class="background-8"></div>-->
 
         </div>
         <div class="top-card">
@@ -59,6 +59,10 @@
             </div>
         </div>
         <div class="centre-card">
+          <img class="center-car" src="/img/Shop/audi1.png">
+          <img class="center-foot" src="/img/Shop/feet_0321.png">
+          <img class="center-shirt-1" src="/img/Shop/shirt-1.png">
+          <img class="center-shirt-2" src="/img/Shop/shirt-2.png">
             <div class="pluses" v-for="item in pluses" :key="item.id">
                 <h3 class="pluses-img">+</h3>
                 <p class="pluses-text">{{item.text}}</p>
@@ -66,7 +70,7 @@
             </div>
         </div>
         <div class="bottom-card">
-            <svg class="bottom-card-coin" xmlns="http://www.w3.org/2000/svg" width="88" height="88" viewBox="0 0 88 88"
+            <svg class="bottom-card-coin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 88"
                 fill="none">
                 <g filter="url(#filter0_d_1_161)">
                     <path
@@ -132,14 +136,17 @@ export default {
 </script>
 
 <style lang="scss">
+* {
+  box-sizing: border-box;
+}
 .exclusive-part {
-    width: 775px;
-    height: 442px;
-    border: 1px solid #171819;
-    border-radius: 27px;
+    width: 43rem;
+    height: 22.4444rem;
+    border: 0.0625rem solid #171819;
+    border-radius: 1.6875rem;
     position: relative;
-    padding-top: 19px;
-    padding-left: 35px;
+    padding-top: 1.1875rem;
+    padding-left: 2.1875rem;
     overflow: hidden;
     /*transition: transform 0.4s ease;
 
@@ -147,6 +154,9 @@ export default {
         transform: scale(1.04);
 
     }*/
+  @media (max-width: 1728px) {
+    width: 40rem;
+  }
 }
 
 .background {
@@ -154,79 +164,85 @@ export default {
 
     &-1 {
         position: absolute;
+      width: 43.05rem;
+      height: 21.44rem;
         left: 0px;
-        top: 0px;
+        top: 1rem;
     }
 
     &-2 {
         position: absolute;
+      width: 43.05rem;
+      height: 19.94rem;
         left: 0px;
-        top: 68px;
+        top: 4.25rem;
     }
 
     &-3 {
         position: absolute;
+      width: 43.05rem;
+      height: 2.33rem;
         left: 0px;
-        top: 396px;
+        top: 24.75rem;
 
     }
 
     &-4 {
         position: absolute;
-        width: 640px;
-        height: 190px;
+        width: 40rem;
+        height: 11.875rem;
         left: 0px;
-        top: 396px;
+        top: 24.75rem;
         background: #FFFFFF;
         opacity: 0.25;
-        filter: blur(89px);
+        filter: blur(5.5625rem);
     }
 
     &-5 {
-        width: 591.01px;
-        height: 277.08px;
-        z-index: 99;
-        position: absolute;
-        top: 177px;
-        left: 215px;
-        background: url("/img/Shop/audi1.png");
-        background-repeat: no-repeat;
+        //width: 591.01px;
+        //height: 277.08px;
+        //z-index: 99;
+        //position: absolute;
+        //top: 177px;
+        //left: 215px;
+        //background: url("/img/Shop/audi1.png");
+        //background-repeat: no-repeat;
 
     }
 
     &-6 {
-        width: 264px;
-        height: 149px;
-
-        position: absolute;
-        top: 304px;
-        left: 121px;
-        background: url("/img/Shop/feet_0321.png");
-        background-repeat: no-repeat;
+        //width: 264px;
+        //height: 149px;
+        //
+        //position: absolute;
+        //top: 304px;
+        //left: 121px;
+        //background: url("/img/Shop/feet_0321.png");
+        //background-repeat: no-repeat;
     }
 
     &-7 {
-        width: 248.95px;
-        height: 199.49px;
-
-        position: absolute;
-        top: 80px;
-        left: 195px;
-        background: url("/img/Shop/shirt-1.png");
-        background-repeat: no-repeat;
-        filter: blur(1px);
-        transform: rotate(-15deg);
+        //width: 248.95px;
+        //height: 199.49px;
+        //
+        //position: absolute;
+        //top: 80px;
+        //left: 195px;
+        //background: url("/img/Shop/shirt-1.png");
+        //background-repeat: no-repeat;
+        //filter: blur(1px);
+        //transform: rotate(-15deg);
     }
 
     &-8 {
-        width: 394px;
-        height: 311px;
-
-        position: absolute;
-        top: 0px;
-        left: 357px;
-        background: url("/img/Shop/shirt-2.png");
-        background-repeat: no-repeat;
+        //width: 394px;
+        //height: 311px;
+        //
+        //position: absolute;
+        //top: 0px;
+        //left: 357px;
+        //background: url("/img/Shop/shirt-2.png");
+        //background-repeat: no-repeat;
     }
 
 }
@@ -236,18 +252,18 @@ export default {
 }
 
 .left-card-part {
-    margin-right: 30px;
+    margin-right: 1.875rem;
 }
 
 .card-stick {
-    width: 26px;
-    height: 2px;
+    width: 1.625rem;
+    height: 0.125rem;
     background: #FFFFFF;
-    border: 1px solid rgba(255, 255, 255, 0.09);
-    box-shadow: 0px 0px 14px rgba(255, 255, 255, 0.55);
+    border: 0.0625rem solid rgba(255, 255, 255, 0.09);
+    box-shadow: 0px 0px 0.0875rem rgba(255, 255, 255, 0.55);
     transform: rotate(-90deg);
     position: absolute;
-    top: 40px;
+    top: 2.5rem;
     left: 0px;
 }
 
@@ -255,8 +271,8 @@ export default {
     font-family: 'Akrobat';
     font-style: normal;
     font-weight: 700;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
     text-transform: uppercase;
 
     color: rgba(255, 255, 255, 0.55);
@@ -268,8 +284,8 @@ export default {
     font-family: 'Akrobat';
     font-style: normal;
     font-weight: 700;
-    font-size: 48px;
-    line-height: 58px;
+    font-size: 3rem;
+    line-height: 3.625rem;
     /* identical to box height */
 
     text-transform: uppercase;
@@ -281,21 +297,21 @@ export default {
     font-family: 'Akrobat';
     font-style: normal;
     font-weight: 700;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
     text-transform: uppercase;
 
     color: rgba(255, 255, 255, 0.55);
-    max-width: 204px;
+    max-width: 12.75rem;
 }
 
 .limited {
-    width: 153px;
-    height: 35px;
-    margin-top: 27px;
+    width: 9.5625rem;
+    height: 2.1875rem;
+    margin-top: 1.6875rem;
     background: rgba(92, 255, 128, 0.25);
-    border: 2px solid #5CFF80;
-    border-radius: 18px;
+    border: 0.125rem solid #5CFF80;
+    border-radius: 1.125rem;
     display: flex;
     align-items: center;
 
@@ -303,54 +319,100 @@ export default {
         font-family: 'Akrobat';
         font-style: normal;
         font-weight: 700;
-        font-size: 16px;
-        line-height: 19px;
+        font-size: 1rem;
+        line-height: 1.1875rem;
         text-transform: uppercase;
 
         color: #FFFFFF;
         margin: 0 auto;
     }
 }
+.center {
+  &-car {
+    z-index: 10;
+    width: 27.83rem;
+    height: 12.38rem;
+    position: absolute;
+    top: 10.3125rem;
+    left: 15rem;
 
+    @media (max-height: 1728px) {
+      width: 25.83rem;
+      height: 12.38rem;
+    }
+  }
+  &-foot {
+    z-index: 11;
+    width: 12.5rem;
+    height: 6.3125rem;
+    position: absolute;
+    top: 16.25rem;
+    left: 12.0625rem;
+  }
+  &-shirt-1 {
+    position: absolute;
+    width: 15.56rem;
+    height: 12.5rem;
+    top: 5.25rem;
+    left: 14.6875rem;
+    filter: blur(0.0625rem);
+    //transform: rotate(-15deg);
+  }
+  &-shirt-2 {
+    position: absolute;
+    width: 19.625rem;
+    height: 16.4375rem;
+    top: 1.5625rem;
+    left: 22.8125rem;
+
+    @media (max-width: 1728px) {
+      width: 17.625rem;
+      height: 15.4375rem;
+      top: 2.5625rem;
+    }
+  }
+}
 .pluses {
-    height: 41px;
+    height: 2.5625rem;
     display: flex;
 
     &-img {
         font-family: 'Akrobat';
         font-style: normal;
         font-weight: 900;
-        font-size: 48px;
-        line-height: 58px;
+        font-size: 3rem;
+        line-height: 3.625rem;
         /* identical to box height */
 
         text-transform: uppercase;
 
         color: #5CFF80;
 
-        text-shadow: 0px 0px 14px rgba(92, 255, 128, 0.25);
-        margin-right: 12px;
+        text-shadow: 0px 0px 0.875rem rgba(92, 255, 128, 0.25);
+        margin-right: 0.75rem;
     }
 
     &-text {
         font-family: 'Akrobat';
         font-style: normal;
         font-weight: 700;
-        font-size: 16px;
-        line-height: 19px;
+        font-size: 1rem;
+        line-height: 1.1875rem;
         text-transform: uppercase;
 
         color: rgba(255, 255, 255, 0.85);
-        margin-top: 23px;
+        margin-top: 1.4375rem;
     }
 }
 
 .bottom-card {
-    margin-top: 40px;
+    margin-top: 0.5rem;
     display: flex;
 
     &-coin {
-        margin-left: -16px;
+        margin-left: -1rem;
+      width: 4.88rem;
+      height: 4.88rem;
     }
 
     &-text-part {
@@ -361,8 +423,8 @@ export default {
         font-family: 'Akrobat';
         font-style: normal;
         font-weight: 700;
-        font-size: 14px;
-        line-height: 17px;
+        font-size: 0.875rem;
+        line-height: 1.0625rem;
         /* identical to box height */
 
         text-transform: uppercase;
@@ -374,8 +436,8 @@ export default {
         font-family: 'Akrobat';
         font-style: normal;
         font-weight: 700;
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
         /* identical to box height */
 
         text-transform: uppercase;

@@ -127,11 +127,13 @@ export default {
   }
 
   &__header {
-    width: 100%;
+    min-width: 96rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    @media (max-width: 1728px) {
+      min-width: 87rem;
+    }
     .heading {
       white-space: nowrap;
       margin-right: 2rem;

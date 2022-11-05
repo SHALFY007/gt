@@ -36,6 +36,7 @@ export default {
   overflow: hidden;
   position: relative;
   cursor: pointer;
+  //min-width: 1725px;
 
   &::after {
     transition: all 0.2s;

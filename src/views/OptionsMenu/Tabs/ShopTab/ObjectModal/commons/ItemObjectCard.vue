@@ -1,7 +1,7 @@
 <template>
     <div class="item-card-object" :id="objectCard.id+'-item'" @click="$emit('modalClick', `${objectCard.id}-item`)">
         <div class="background">
-            <svg class="background-1" xmlns="http://www.w3.org/2000/svg" width="340" height="386" viewBox="0 0 340 386"
+            <svg class="background-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 386"
                 fill="none">
                 <path d="M453.702 -260L-192.298 386H101.603L453.702 33.9009L805.801 386H1099.7L453.702 -260Z"
                     fill="url(#paint0_linear_1_232)" fill-opacity="0.02" />
@@ -13,7 +13,7 @@
                     </linearGradient>
                 </defs>
             </svg>
-            <svg class="background-2" xmlns="http://www.w3.org/2000/svg" width="340" height="349" viewBox="0 0 340 349"
+            <svg class="background-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 349"
                 fill="none">
                 <path d="M453.702 0L-192.298 640H101.603L453.702 291.171L805.801 640H1099.7L453.702 0Z"
                     fill="url(#paint0_linear_1_231)" fill-opacity="0.02" />
@@ -26,7 +26,7 @@
                 </defs>
             </svg>
             <div class="background-3"></div>
-            <div class="background-4d"></div>
+<!--            <div class="background-4d"></div>-->
         </div>
         <div class="top-card">
             <div class="left-card-part">
@@ -42,7 +42,7 @@
                     <h2 class="count-premium">750,000</h2>
                 </div>
 
-                <svg class="right-coin" xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72"
+                <svg class="right-coin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72"
                     fill="none">
                     <g filter="url(#filter0_d_1_206)">
                         <path
@@ -85,6 +85,7 @@
                 </svg>
             </div>
         </div>
+      <img class="centre-img" src="/img/Shop/shirt-object-modal.png">
         <div class="bottom-card-modal">
             <button class="exclusive-button-buy">
                 <span class="exclusive-button-text">Приобрести</span>
@@ -115,12 +116,12 @@ export default {
 <style lang="scss" scoped>
 .item-card-object {
     position: relative;
-    width: 340px;
-    height: 412px;
-    border-radius: 27px;
+    width: 18.88rem;
+    height: 21.88rem;
+    border-radius: 1.5rem;
     border: 1px solid #1E1E1E;
-    padding-top: 19px;
-    padding-left: 35px;
+    padding-top: 1.055rem;
+    padding-left: 1.944rem;
     overflow: hidden;
     /*transition: transform 0.4s ease;
 
@@ -142,35 +143,39 @@ export default {
 
     &-1 {
         position: absolute;
-        top: -18px;
-        left: -34px;
+      width: 18.88rem;
+      height: 21.44rem;
+        top: -1rem;
+        left: -1.88rem;
     }
 
     &-2 {
         position: absolute;
-        top: 37px;
-        left: -38px;
+      width: 18.88rem;
+      height: 19.388rem;
+        top: 2.055rem;
+        left: -2.11rem;
 
     }
 
     &-3 {
         position: absolute;
-        width: 190px;
-        height: 190px;
+        width: 10.55rem;
+        height: 10.55rem;
         background: #FFFFFF;
         opacity: 0.25;
-        filter: blur(89px);
-        top: 286px;
-        left: 49px;
+        filter: blur(4.944rem);
+        top: 15.88rem;
+        left: 2.722rem;
     }
 
     &-4d {
         position: absolute;
-        width: 176px;
-        height: 186px;
+        width: 9.77rem;
+        height: 10.33rem;
         background: url("/img/Shop/shirt-object-modal.png");
-        top: 134px;
-        left: 46px;
+        top: 7.44rem;
+        left: 2.55rem;
     }
 }
 
@@ -179,18 +184,18 @@ export default {
 }
 
 .left-card-part {
-    margin-right: 38px;
+    margin-right: 2.11rem;
 }
 
 .card-stick {
-    width: 26px;
-    height: 2px;
+    width: 1.44rem;
+    height: 0.11rem;
     position: absolute;
-    top: 41px;
-    left: 8px;
+    top: 2.277rem;
+    left: 0.44rem;
     background-color: #FFFFFF;
-    border: 1px solid rgba(255, 255, 255, 0.09);
-    box-shadow: 0px 0px 14px rgba(255, 255, 255, 0.55);
+    border: 0.055rem solid rgba(255, 255, 255, 0.09);
+    box-shadow: 0px 0px 0.77rem rgba(255, 255, 255, 0.55);
     transform: rotate(-90deg);
 
 }
@@ -199,8 +204,8 @@ export default {
     font-family: 'Akrobat';
     font-style: normal;
     font-weight: 700;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 0.66rem;
+    line-height: 0.77rem;
     text-transform: uppercase;
 
     color: rgba(255, 255, 255, 0.55);
@@ -212,9 +217,9 @@ export default {
     font-family: 'Akrobat';
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 1.33rem;
     line-height: 103%;
-    max-width: 96px;
+    max-width: 5.722rem;
     /* or 25px */
 
     text-transform: uppercase;
@@ -228,33 +233,33 @@ export default {
     font-family: 'Akrobat';
     font-style: normal;
     font-weight: 700;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 0.666rem;
+    line-height: 0.777rem;
     text-transform: uppercase;
 
     color: rgba(255, 255, 255, 0.55);
-    max-width: 204px;
+    max-width: 11.33rem;
     ;
 }
 
 .right-card-part {
-    padding-top: 24px;
+    padding-top: 1.33rem;
     display: flex;
     flex-direction: column;
 }
 
 .right-card-text {
     position: absolute;
-    left: 223px;
-    top: 20px;
+    left: 12.388rem;
+    top: 1.11rem;
 }
 
 .subtitle-donate {
     font-family: 'Akrobat';
     font-style: normal;
     font-weight: 700;
-    font-size: 11.2836px;
-    line-height: 14px;
+    font-size: 0.6268666rem;
+    line-height: 0.77rem;
     /* identical to box height */
 
     text-align: right;
@@ -267,8 +272,8 @@ export default {
     font-family: 'Akrobat';
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 1.11rem;
+    line-height: 1.33rem;
     /* identical to box height */
 
     text-transform: uppercase;
@@ -278,40 +283,58 @@ export default {
 
 .right-coin {
     position: absolute;
-    top: 4px;
-    left: 275px;
+  width: 4rem;
+  height: 4rem;
+    top: 0.22rem;
+    left: 15.277rem;
 }
-
+.centre-img {
+  position: absolute;
+  z-index: 99;
+  margin-top: 1rem;
+  width: 9.77rem;
+  height: 10.33rem;
+  margin-left: 2.6111rem;
+}
 .bottom-card-modal {
     display: flex;
-    margin-top: 210px;
-    margin-left: 14px;
+    margin-top: 11.666rem;
+    margin-left: 0.77rem;
 }
 
 .exclusive-button-buy {
-    width: 119px;
-    height: 47px;
-
-    margin-right: 4px;
+    z-index: 9999;
+    width: 6.611rem;
+    height: 2.611rem;
+    cursor: pointer;
+    margin-right: 0.222rem;
     background: linear-gradient(180deg, rgba(92, 255, 128, 0.25) 0%, rgba(17, 90, 33, 0.25) 100%);
-    border: 1px solid #5CFF80;
+    border: 0.055rem solid #5CFF80;
+  //transition: opacity 0.4s ease;
+  &:hover {
+    //background: linear-gradient(180deg, rgba(255, 229, 92, 0.25) 0%, rgba(90, 70, 17, 0.25) 100%);
+    opacity: 0.6;
+  }
 }
 
 .exclusive-button-try {
-    width: 119px;
-    height: 47px;
-
+    width: 6.611rem;
+    height: 2.611rem;
+  z-index: 9999;
     background: linear-gradient(180deg, rgba(255, 229, 92, 0.25) 0%, rgba(90, 70, 17, 0.25) 100%);
-    border: 1px solid #FFE55C;
-
+    border: 0.055rem solid #FFE55C;
+  //transition: opacity 0.4s ease;
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .exclusive-button-text {
     font-family: 'Akrobat';
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 0.777rem;
+    line-height: 0.944rem;
     /* identical to box height */
 
     text-align: center;

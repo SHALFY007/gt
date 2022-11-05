@@ -8,7 +8,7 @@
     </div>
     <div class="animals-cente-cards">
       <div class="animal-centre-card" v-for="item in animalsList" :key="item.id">
-        <AnimalCard :animalCard="item" class="animal-card-modal"/>
+        <AnimalCard :animalCard="item" class="animal-card-modal" @animalModalClick="animalModalClick"/>
       </div>
     </div>
     <div class="animals-right-cards">
@@ -31,10 +31,24 @@ export default {
   components: {AnimalDescription, AnimalCard, MainAnimalCard},
   data() {
     return {
-      animalsList: [{id:1, name:'кирюха', color: '#FC9B41', opacity: '0.25', image: '/img/Shop/dog-modal.png', width: '267px', left: '44px'},
-                    {id:2, name:'анжелика', color: '#A582A5', opacity: '0.55', image: '/img/Shop/cat-modal.png', width: '220px', left: '68px'}],
+      activeEl: null,
+      animalsList: [{id:1, name:'кирюха', color: '#FC9B41', opacity: '0.25', image: '/img/Shop/dog-modal.png', left: '4.22rem', width: '14.833rem', height: '13.66rem'},
+                    {id:2, name:'анжелика', color: '#A582A5', opacity: '0.55', image: '/img/Shop/cat-modal.png', left: '5.33rem', width: '12.22rem', height: '15.722rem'}],
       animalsDescription: [{id:1, name:'кирилл', buyName: 'кирилла'},
         {id:2, name:'анжелика', buyName: 'анжелику'}]
+    }
+  },
+  methods: {
+    animalModalClick(id) {
+        if (this.activeEl == null) {
+          console.log('asd')
+          document.getElementById(id).classList.add('active')
+          this.activeEl = id
+        } else {
+          document.getElementById(this.activeEl).classList.remove('active')
+          this.activeEl = id
+          document.getElementById(this.activeEl).classList.add('active')
+        }
     }
   }
 
@@ -53,10 +67,12 @@ export default {
   background: url("/img/optionsMenu/bg.png"), rgba(0, 0, 0, 0.96);
   background-blend-mode: overlay;
 }
-
+.active {
+  border: 0.055rem solid #5CFF80 !important;
+}
 .object-modal-item {
-  //transition: transform 0.4s ease;
-  margin-right: 74px;
+  //transition:  background-color 0.4s ease;
+  margin-right: 4.11rem;
 
   &:hover {
     background-color: #1E1E1E;
@@ -69,26 +85,27 @@ export default {
 }
 .animal-stick {
   position: relative;
-  height: 810px;
-  width: 2px;
+  height: 45rem;
+  width: 0.11rem;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%);
-  margin-right: 16px;
+  margin-right: 0.88rem;
   &-active {
     position: absolute;
     background: #5CFF80;
-    width: 2px;
-    height: 133.04px;
+    width: 0.11rem;
+    height: 7.3911rem;
   }
 }
 .animals-cente-cards {
-  margin-right: 58px;
+  margin-right: 3.22rem;
 }
 .animal-card-modal {
+ // transition: border 0.4s ease;
   &:hover {
-    border: 1px solid #5CFF80 !important;
+    border: 0.055rem solid #5CFF80 !important;
   }
 }
 .animal-right-card {
-  margin-bottom: 25px;
+  margin-bottom: 1.388rem;
 }
 </style>

@@ -23,7 +23,7 @@
             <div class="background-1"></div>
           </div>
           <div class="purchase-card-stick"></div>
-          <svg class="purchase-coin" xmlns="http://www.w3.org/2000/svg" width="88" height="88" viewBox="0 0 88 88" fill="none">
+          <svg class="purchase-coin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 88" fill="none">
             <g filter="url(#filter0_d_1_161)">
               <path d="M69 44C69 57.8071 57.8071 69 44 69C30.1929 69 19 57.8071 19 44C19 30.1929 30.1929 19 44 19C57.8071 19 69 30.1929 69 44ZM20.7921 44C20.7921 56.8173 31.1827 67.2079 44 67.2079C56.8173 67.2079 67.2079 56.8173 67.2079 44C67.2079 31.1827 56.8173 20.7921 44 20.7921C31.1827 20.7921 20.7921 31.1827 20.7921 44Z" fill="#5CFF80"/>
             </g>
@@ -81,8 +81,8 @@ export default {
 <style lang="scss" scoped>
 .animal-description-card {
   position: relative;
-  width: 655px;
-  height: 387px;
+  width: 36.388rem;
+  height: 21.5rem;
   //border: 1px solid red;
 
 }
@@ -90,37 +90,37 @@ export default {
 .background {
   position: absolute;
   &-1 {
-    width: 150px;
-    height: 150px;
-    left: 87px;
-    top: 67px;
+    width: 8.33rem;
+    height: 0.833rem;
+    left: 4.833rem;
+    top: 3.722rem;
 
     background: #FFFFFF;
     opacity: 0.25;
-    filter: blur(89px);
+    filter: blur(4.9444rem);
   }
 }
 .card-stick {
-  width: 26px;
-  height: 2px;
+  width: 1.44rem;
+  height: 0.111rem;
   background: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  box-shadow: 0px 0px 14px rgba(255, 255, 255, 0.55);
+  border: 0.055rem solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0px 0px 0.77rem rgba(255, 255, 255, 0.55);
   transform: rotate(-90deg);
   position: absolute;
-  top: 13px;
-  left: -13px;
+  top: 0.7222rem;
+  left: -0.7222rem;
 
 }
 .animal-description-info {
-  margin-left: 16px;
+  margin-left: 0.88rem;
 }
 .category-card {
   font-family: 'Akrobat';
   font-style: normal;
   font-weight: 700;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 0.666rem;
+  line-height: 0.777rem;
   text-transform: uppercase;
 
   color: rgba(255, 255, 255, 0.55);
@@ -129,8 +129,8 @@ export default {
   font-family: 'Akrobat';
   font-style: normal;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 46px;
+  font-size: 2.666rem;
+  line-height: 2.555rem;
   /* identical to box height */
 
   text-transform: uppercase;
@@ -138,45 +138,45 @@ export default {
   color: #FFFFFF;
 }
 .subtitle-card {
-  max-width: 639px;
+  max-width: 35.5rem;
   font-family: 'Akrobat';
   font-style: normal;
   font-weight: 600;
-  font-size: 15px;
-  line-height: 35px;
+  font-size: 0.8333rem;
+  line-height: 1.944rem;
   text-transform: uppercase;
-  margin-bottom: 9px;
+  margin-bottom: 0.5rem;
 }
 .pluses-part {
   display: flex;
-  margin-bottom: 68px;
+  margin-bottom: 3.777rem;
 }
 .pluse-card {
   display: flex;
-  margin-right: 20px;
+  margin-right: 1.11rem;
 }
 .pluse {
   font-family: 'Akrobat';
   font-style: normal;
   font-weight: 900;
-  font-size: 48px;
-  line-height: 58px;
+  font-size: 2.666rem;
+  line-height: 3.22rem;
   /* identical to box height */
 
   text-transform: uppercase;
-  margin-right: 12px;
+  margin-right: 0.66rem;
 
   color: #5CFF80;
 
-  text-shadow: 0px 0px 14px rgba(92, 255, 128, 0.25);
+  text-shadow: 0px 0px 0.777rem rgba(92, 255, 128, 0.25);
 
   &-title {
     font-family: 'Akrobat';
     font-style: normal;
-    padding-top: 23px;
+    padding-top: 1.277rem;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 0.888rem;
+    line-height: 1.055rem;
     text-transform: uppercase;
 
     color: rgba(255, 255, 255, 0.85);
@@ -187,14 +187,19 @@ export default {
   display: flex;
 }
 .button-animal-buy-btn {
+
   display: flex;
-  width: 354px;
-  height: 85px;
+  width: 19.66rem;
+  height: 4.712rem;
   background: linear-gradient(180deg, rgba(219, 18, 27, 0.25) 0%, rgba(123, 9, 14, 0.25) 100%);
-  border: 1px solid #DB121B;
-  box-shadow: inset 0px 0px 15px rgba(220, 32, 40, 0.86);
+  border: 0.055rem solid #DB121B;
+  box-shadow: inset 0px 0px 0.833rem rgba(220, 32, 40, 0.86);
   justify-content: center;
-  margin-right: 16px;
+  margin-right: 0.88rem;
+ // transition: opacity 0.4s ease;
+  &:hover {
+    opacity: 0.6;
+  }
   //&:hover {
   //  background: #ccc;
   //}
@@ -206,8 +211,8 @@ export default {
   font-family: 'Akrobat';
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 0.77rem;
+  line-height: 0.944rem;
   /* identical to box height */
 
   align-self: center;
@@ -217,38 +222,40 @@ export default {
 }
 .purchase-price {
   position: relative;
-  width: 207px;
-  height: 85px;
-  border: 1px solid #171819;
+  width: 11.5rem;
+  height: 4.722rem;
+  border: 0.055rem solid #171819;
   overflow: hidden;
 }
 .purchase-card-stick {
-  width: 26px;
-  height: 2px;
+  width: 1.44rem;
+  height: 0.11rem;
   background: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  box-shadow: 0px 0px 14px rgba(255, 255, 255, 0.55);
+  border: 0.055rem solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0px 0px 0.77rem rgba(255, 255, 255, 0.55);
   transform: rotate(-90deg);
   position: absolute;
-  top: 36px;
-  left: 1px;
+  top: 2rem;
+  left: 0.055rem;
 }
 .purchase-coin {
   position: absolute;
-  left: 19px;
+  width: 4.88rem;
+  height: 4.88rem;
+  left: .555rem;
   top: 0;
   bottom: 0;
 }
 .purchase-text-part {
-  margin-top: 23px;
-  margin-left: 96px;
+  margin-top: 1.277rem;
+  margin-left: 5.33rem;
 }
 .valute {
   font-family: 'Akrobat';
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 0.77rem;
+  line-height: 0.944rem;
   /* identical to box height */
 
   text-transform: uppercase;
@@ -260,8 +267,8 @@ export default {
   font-family: 'Akrobat';
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 1.11rem;
+  line-height: 1.33rem;
   /* identical to box height */
 
   text-transform: uppercase;

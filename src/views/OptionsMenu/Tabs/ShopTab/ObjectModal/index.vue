@@ -99,17 +99,17 @@ export default {
 }
 
 .category-object {
-    margin-bottom: 22.6px;
+    margin-bottom: 1.255rem;
 
 }
 
 .categories-object {
     display: flex;
     flex-direction: column;
-    margin-right: 39px;
+    margin-right: 2.166rem;
 }
 .object-modal-no-border {
-  //transition: transform 0.4s ease;
+  //transition: background-color 0.4s ease;
 
   &:hover {
     //transform: scale(1.04);
@@ -119,13 +119,13 @@ export default {
 }
 .object-items {
     display: flex;
-    max-width: 1094px;
-    max-height: 906px;
+    max-width: 60.77rem;
+    max-height: 46.33rem;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 .object-modal-item {
-  //transition: transform 0.4s ease;
+  //transition: border 0.4s ease;
 
   &:hover {
     //transform: scale(1.04);
