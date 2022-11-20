@@ -71,8 +71,12 @@ export default {
   border: 0.055rem solid #5CFF80 !important;
 }
 .object-modal-item {
-  //transition:  background-color 0.4s ease;
+  transition:  background-color .1s ease-out;
   margin-right: 4.11rem;
+
+  @media (max-width: 1728px) {
+    margin-right: 1.11rem;
+  }
 
   &:hover {
     background-color: #1E1E1E;
@@ -100,7 +104,7 @@ export default {
   margin-right: 3.22rem;
 }
 .animal-card-modal {
- // transition: border 0.4s ease;
+  transition: border .4s ease-out;
   &:hover {
     border: 0.055rem solid #5CFF80 !important;
   }

@@ -107,12 +107,15 @@ export default {
     display: flex;
     flex-direction: column;
     margin-right: 2.166rem;
+
+  @media (max-width: 1728px) {
+    margin-right: 1.166rem;
+  }
 }
 .object-modal-no-border {
-  //transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease-out;
 
   &:hover {
-    //transform: scale(1.04);
     background-color: #1E1E1E;
 
   }
@@ -123,9 +126,13 @@ export default {
     max-height: 46.33rem;
     flex-wrap: wrap;
     justify-content: space-between;
+
+  @media (max-width: 1728px) {
+    max-width: 57.77rem;
+  }
 }
 .object-modal-item {
-  //transition: border 0.4s ease;
+  transition : border .4s ease-out;
 
   &:hover {
     //transform: scale(1.04);

@@ -84,7 +84,9 @@ export default {
   width: 36.388rem;
   height: 21.5rem;
   //border: 1px solid red;
-
+  @media (max-width: 1728px) {
+    width: 34.388rem;
+  }
 }
 
 .background {
@@ -150,6 +152,10 @@ export default {
 .pluses-part {
   display: flex;
   margin-bottom: 3.777rem;
+
+  @media (max-width: 1728px) {
+    margin-bottom: 1.777rem;
+  }
 }
 .pluse-card {
   display: flex;
@@ -196,7 +202,7 @@ export default {
   box-shadow: inset 0px 0px 0.833rem rgba(220, 32, 40, 0.86);
   justify-content: center;
   margin-right: 0.88rem;
- // transition: opacity 0.4s ease;
+  transition: opacity .4s ease-out;
   &:hover {
     opacity: 0.6;
   }

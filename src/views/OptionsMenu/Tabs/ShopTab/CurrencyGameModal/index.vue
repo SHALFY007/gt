@@ -60,8 +60,13 @@ export default {
 }
 .currency-left-card {
   margin-right: 4.444rem;
+
 }
 .currency-hover {
+  transition: background-color .4s ease-out;
+  &-border {
+    transition: border .4s ease-out;
+  }
   &-border:hover {
       border: 0.055rem solid #5CFF80 !important;
 

@@ -70,6 +70,10 @@ export default {
   border: 1px solid #171819;
   border-radius: 1.5rem;
   overflow: hidden;
+  
+  @media (max-width: 1728px) {
+    width: 25.611rem;
+  }
 }
 .background {
   position: absolute;
@@ -198,7 +202,7 @@ export default {
     height: 3.666rem;
     background: linear-gradient(180deg, rgba(92, 255, 128, 0.25) 0%, rgba(17, 90, 33, 0.25) 100%);
     border: 1px solid #5CFF80;
-    //transition: opacity 0.4s ease;
+    transition: opacity .4s ease-out;
   }
   &-button:hover {
     opacity: 0.6;

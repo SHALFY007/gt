@@ -145,6 +145,7 @@ export default {
       transform: scale(1.04);
 
   }*/
+
 }
 
 .top-card {
@@ -262,7 +263,7 @@ export default {
   justify-content: center;
   align-items: center;
   margin-top: 2.66rem;
- // transition: opacity 0.4s ease;
+  transition: opacity .4s ease-out;
   &:hover {
     opacity: 0.6;
   }

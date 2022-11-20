@@ -145,6 +145,9 @@ export default {
         transform: scale(1.04);
 
     }*/
+  @media (max-width: 1728px) {
+    margin-right: 1.166rem;
+  }
 }
 
 .top-card {
@@ -200,6 +203,9 @@ export default {
   height: 16.055rem;
     left: 3rem;
     top: 8.722rem;
+  @media (max-width: 1728px) {
+    left: 0rem;
+  }
 }
 
 .central-image {
@@ -242,6 +248,9 @@ export default {
     text-transform: uppercase;
 
     color: #FFFFFF;
+  @media (max-width: 1728px) {
+    margin-left: 0rem;
+  }
 }
 .buy-button {
   z-index: 9999;
@@ -254,7 +263,11 @@ export default {
     justify-content: center;
     align-items: center;
     margin-top: 1.66rem;
-  //transition: opacity 0.4s ease;
+  transition: opacity .4s ease-out;
+
+  @media (max-width: 1728px) {
+    margin-left: 0rem;
+  }
   &:hover {
     opacity: 0.6;
   }

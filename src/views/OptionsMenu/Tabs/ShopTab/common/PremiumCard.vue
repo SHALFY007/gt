@@ -395,6 +395,7 @@ $hd: 1280px;
   justify-content: center;
   align-items: center;
   margin-top: 15.266rem;
+  transition: opacity .4s ease;
   &:hover {
     opacity: 0.6;
   }

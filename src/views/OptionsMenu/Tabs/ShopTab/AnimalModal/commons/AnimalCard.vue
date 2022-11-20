@@ -72,6 +72,10 @@ export default {
 
 
   }*/
+  @media (max-width: 1728px) {
+    width: 22.388rem;
+
+  }
 }
 
 /*.active {

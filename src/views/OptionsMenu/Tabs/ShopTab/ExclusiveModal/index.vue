@@ -78,7 +78,7 @@ export default {
     display: flex;
 }
 .exclusive-modal-item {
-  //transition: border 0.4s ease;
+  transition: border 0.4s ease-out;
 
   &:hover {
     //transform: scale(1.04);

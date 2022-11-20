@@ -249,6 +249,7 @@ $hd: 1280px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+  transition: opacity .4s ease;
   &:hover {
     opacity: 0.6;
   }

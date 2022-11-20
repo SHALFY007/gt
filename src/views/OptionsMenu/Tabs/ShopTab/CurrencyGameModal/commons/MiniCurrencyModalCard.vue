@@ -309,21 +309,9 @@ export default {
   cursor: pointer;
   background: linear-gradient(180deg, rgba(92, 255, 128, 0.25) 0%, rgba(17, 90, 33, 0.25) 100%);
   border: 0.055rem solid #5CFF80;
-  //transition: opacity 0.4s ease;
+  transition: opacity .4s ease-out;
   &:hover {
     //background: linear-gradient(180deg, rgba(255, 229, 92, 0.25) 0%, rgba(90, 70, 17, 0.25) 100%);
-    opacity: 0.6;
-  }
-}
-
-.exclusive-button-try {
-  width: 6.611rem;
-  height: 2.611rem;
-  z-index: 9999;
-  background: linear-gradient(180deg, rgba(255, 229, 92, 0.25) 0%, rgba(90, 70, 17, 0.25) 100%);
-  border: 0.055rem solid #FFE55C;
-  //transition: opacity 0.4s ease;
-  &:hover {
     opacity: 0.6;
   }
 }

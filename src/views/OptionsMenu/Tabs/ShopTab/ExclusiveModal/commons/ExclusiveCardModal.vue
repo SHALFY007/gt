@@ -128,6 +128,9 @@ export default {
         border: 1px solid #5CFF80;
 
     }*/
+  @media (max-width: 1728px) {
+    width: 28.5rem;
+  }
 }
 
 .active {
@@ -320,8 +323,12 @@ export default {
 
 .bottom-card-modal {
     display: flex;
-  margin-left: 1.111rem;
+    margin-left: 1rem;
     margin-top: 16.22rem;
+
+  @media (max-width: 1728px) {
+    margin: 0 auto;
+  }
 }
 
 .exclusive-button-buy {
@@ -333,7 +340,7 @@ export default {
     margin-right: 0.427222rem;
     background: linear-gradient(180deg, rgba(92, 255, 128, 0.25) 0%, rgba(17, 90, 33, 0.25) 100%);
     border: 0.055rem solid #5CFF80;
-  // transition: opacity 0.4s ease;
+   transition: opacity .4s ease-out;
     &:hover {
     opacity: 0.6;
     }
@@ -345,7 +352,7 @@ export default {
   height: 2.611rem;
     left: 15.5rem;
     top: 40.166rem;
-    //transition: opacity 0.4s ease;
+    transition: opacity .4s ease-out;
     background: linear-gradient(180deg, rgba(255, 229, 92, 0.25) 0%, rgba(90, 70, 17, 0.25) 100%);
     border: 0.055rem solid #FFE55C;
 
